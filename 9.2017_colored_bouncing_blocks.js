@@ -1,3 +1,5 @@
+// Website: https://alwin630.github.io/CivClicker_JS_Online/
+
 var square = {
     x : -50,
     y : -50,
