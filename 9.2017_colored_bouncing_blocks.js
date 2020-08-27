@@ -59,7 +59,7 @@ function setup() {
 
 
 function draw() {
-    background(185);
+    background(0);
     fill(rainbow[rand]);
     rect(square.x, height/2-25, 50, 50);
     fill(rainbow[rand2]);
