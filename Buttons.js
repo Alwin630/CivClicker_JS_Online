@@ -1,17 +1,14 @@
 
-
-
-let stickAmount;
+let stoneButton;
+let stoneAmount=0;
+let stickAmount=0;
 let stickButton;
 function createStickButton() {
 
 
     stickAmount = parseInt(window.localStorage.getItem('amountOfSticks'));
 
-    if (isNaN(stickAmount))
-    {
-        stickAmount = 0;
-    }
+    
 
 
     fill(255);
@@ -23,7 +20,7 @@ function createStickButton() {
 
 // Increase the number of sticks
 function stickButtonLogic() {
-    stickAmount += 1;   
+    stickAmount+=1;   
 }
 
 // Update the counter text
@@ -34,6 +31,20 @@ function drawSticks() {
     text("sticks " + stickAmount, 450, 50);
 }
 
-function numberOfSticks() {
-    return stickAmount;
+function createStoneButton() {
+    stoneAmount = parseInt(window.localStorage.getItem('amountOfStone'));
+    stoneButton = createButton('this button should be stone');
+    stoneButton.position(150,150);
+    stoneButton.size(70,70);
+    stoneButton.mousePressed(stoneButtonLogic);
+}
+
+function stoneButtonLogic() {
+    stoneAmount+=1;
+}
+
+function drawStone() {
+    fill(128, 128, 128);
+    textSize(32);
+    text("stone " + stoneAmount, 450, 150);
 }

@@ -6,6 +6,7 @@ function setup() {
     noStroke();
     
     createStickButton();
+    createStoneButton();
 }
 
 
@@ -17,13 +18,14 @@ function draw() {
     fill(0, 153, 51);
     ellipse(500,500,80,80);
     drawSticks();
+    drawStone();
 }
 
 // Store number of sticks in browser
-var data = {
+let data = {
     storeData: function() {
-        window.localStorage.setItem('amountOfSticks', numberOfSticks());
-
+        window.localStorage.setItem('amountOfSticks', stickAmount);
+        window.localStorage.setItem('amountOfStone', stoneAmount);
     }
 }
 
