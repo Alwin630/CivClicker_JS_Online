@@ -2,7 +2,7 @@
 
 function setup() {
     "use strict";
-    createCanvas(1280, 980);
+    createCanvas(1280, 960);
 }
 
 
