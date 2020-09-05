@@ -1,5 +1,5 @@
 
-let stickAmount = 0;
+let stickAmount = parseInt(window.localStorage.getItem('amountOfSticks'));
 let stickButton;
 function createStickButton() {
 
@@ -21,5 +21,8 @@ function drawSticks() {
     fill(77, 38, 0);
     textSize(32);
     text("sticks " + stickAmount, 450, 50);
-    
+}
+
+function numberOfSticks() {
+    return stickAmount;
 }

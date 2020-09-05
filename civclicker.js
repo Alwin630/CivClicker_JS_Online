@@ -18,3 +18,13 @@ function draw() {
     ellipse(500,500,80,80);
     drawSticks();
 }
+
+// Store number of sticks in browser
+var data = {
+    storeData: function() {
+        window.localStorage.setItem('amountOfSticks', numberOfSticks());
+
+    }
+}
+
+window.onbeforeunload = function() { data.storeData(); };
