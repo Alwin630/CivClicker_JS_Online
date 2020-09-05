@@ -61,7 +61,7 @@ function drawStone() {
 
 function createMeatButton() {
     meatAmount = parseInt(window.localStorage.getItem('amountOfMeat'));
-    if(isNaN(stoneAmount)) {
+    if(isNaN(meatAmount)) {
         meatAmount = 0;
     }
     meatButton = createButton('this should be an animal');
@@ -75,7 +75,7 @@ function meatButtonLogic() {
 }
 
 function drawMeat() {
-    fill(128, 128, 128);
+    fill(170,34,34);
     textSize(32);
     text("Meat " + meatAmount, 450, 250);
 }
@@ -90,4 +90,5 @@ function reset() {
 function resetLogic() {
     stoneAmount = 0;
     stickAmount = 0;
+    meatAmount = 0;
 }
