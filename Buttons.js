@@ -18,10 +18,8 @@ function stickButtonLogic() {
 // Update the counter text
 function drawSticks() {
     
-    fill(0);
+    fill(77, 38, 0);
     textSize(32);
     text("sticks " + stickAmount, 450, 50);
     
 }
-
-// 
