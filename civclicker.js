@@ -16,4 +16,5 @@ function draw() {
     rect(495,534,10,50)
     fill(0, 153, 51);
     ellipse(500,500,80,80);
+    drawSticks();
 }
