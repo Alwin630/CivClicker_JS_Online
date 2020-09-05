@@ -1,13 +1,15 @@
 
 let stoneButton;
-let stoneAmount=0;
-let stickAmount=0;
+let stoneAmount;
+let stickAmount;
 let stickButton;
 function createStickButton() {
 
 
     stickAmount = parseInt(window.localStorage.getItem('amountOfSticks'));
-
+    if(isNaN(stickAmount)) {
+        stickAmount = 0;
+    }
     
 
 
@@ -33,6 +35,9 @@ function drawSticks() {
 
 function createStoneButton() {
     stoneAmount = parseInt(window.localStorage.getItem('amountOfStone'));
+    if(isNaN(stoneAmount)) {
+        stoneAmount = 0;
+    }
     stoneButton = createButton('this button should be stone');
     stoneButton.position(150,150);
     stoneButton.size(70,70);
