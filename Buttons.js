@@ -1,6 +1,11 @@
+let resetButton;
+
+let meatButton;
+let meatAmount;
 
 let stoneButton;
 let stoneAmount;
+
 let stickAmount;
 let stickButton;
 function createStickButton() {
@@ -52,4 +57,37 @@ function drawStone() {
     fill(128, 128, 128);
     textSize(32);
     text("stone " + stoneAmount, 450, 150);
+}
+
+function createMeatButton() {
+    meatAmount = parseInt(window.localStorage.getItem('amountOfMeat'));
+    if(isNaN(stoneAmount)) {
+        meatAmount = 0;
+    }
+    meatButton = createButton('this should be an animal');
+    meatButton.position(150,250);
+    meatButton.size(70,70);
+    meatButton.mousePressed(meatButtonLogic);
+}
+
+function meatButtonLogic() {
+    meatAmount+=1;
+}
+
+function drawMeat() {
+    fill(128, 128, 128);
+    textSize(32);
+    text("Meat " + meatAmount, 450, 250);
+}
+
+function reset() {
+    resetButton = createButton('Restart');
+    resetButton.position(450,height-50);
+    resetButton.size(150,50);
+    resetButton.mousePressed(resetLogic);
+}
+
+function resetLogic() {
+    stoneAmount = 0;
+    stickAmount = 0;
 }

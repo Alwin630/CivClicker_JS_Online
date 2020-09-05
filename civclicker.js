@@ -7,6 +7,9 @@ function setup() {
     
     createStickButton();
     createStoneButton();
+    createMeatButton();
+    reset();
+
 }
 
 
@@ -19,6 +22,7 @@ function draw() {
     ellipse(500,500,80,80);
     drawSticks();
     drawStone();
+    drawMeat();
 }
 
 // Store number of sticks in browser
@@ -26,6 +30,7 @@ let data = {
     storeData: function() {
         window.localStorage.setItem('amountOfSticks', stickAmount);
         window.localStorage.setItem('amountOfStone', stoneAmount);
+        window.localStorage.setItem('amountOfMeat', meatAmount);
     }
 }
 
