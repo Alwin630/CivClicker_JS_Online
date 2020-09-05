@@ -1,7 +1,18 @@
 
-let stickAmount = parseInt(window.localStorage.getItem('amountOfSticks'));
+
+
+let stickAmount;
 let stickButton;
 function createStickButton() {
+
+
+    stickAmount = parseInt(window.localStorage.getItem('amountOfSticks'));
+
+    if (isNaN(stickAmount))
+    {
+        stickAmount = 0;
+    }
+
 
     fill(255);
     stickButton = createButton('this button should be a tree');
