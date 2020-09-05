@@ -75,9 +75,10 @@ function meatButtonLogic() {
 }
 
 function drawMeat() {
-    fill(170,34,34);
+    fill(160,34,34);
     textSize(32);
-    text("Meat " + meatAmount, 450, 250);
+    text(meatAmount, 540, 250);
+    image(steakImg,470,215,60,50)
 }
 
 function reset() {
