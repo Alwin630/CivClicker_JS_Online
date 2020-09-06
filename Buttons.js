@@ -2,12 +2,16 @@ let resetButton;
 
 let meatButton;
 let meatAmount;
+let meatProb;
 
 let stoneButton;
 let stoneAmount;
 
 let stickAmount;
 let stickButton;
+
+let xPosForNum = 540;
+
 function createStickButton() {
 
 
@@ -35,7 +39,8 @@ function drawSticks() {
     
     fill(77, 38, 0);
     textSize(32);
-    text("sticks " + stickAmount, 450, 50);
+    text(stickAmount, xPosForNum, 50);
+    image(twigImg,465,12,60,50);
 }
 
 function createStoneButton() {
@@ -71,17 +76,20 @@ function createMeatButton() {
 }
 
 function meatButtonLogic() {
-    meatAmount+=1;
+    meatProb = int(random(1,3));
+    if(meatProb == 1) {
+        meatAmount+= 1;
+    }
 }
 
 function drawMeat() {
     fill(160,34,34);
     textSize(32);
-    text(meatAmount, 540, 250);
-    image(steakImg,470,215,60,50)
+    text(meatAmount, xPosForNum, 250);
+    image(steakImg,470,215,60,50);
 }
 
-function reset() {
+function restartButton() {
     resetButton = createButton('Restart');
     resetButton.position(450,height-50);
     resetButton.size(150,50);

@@ -1,8 +1,11 @@
 // Website: https://alwin630.github.io/CivClicker_JS_Online/
 "use strict";
-let steakImg
+let steakImg;
+let twigImg;
 function preload() {
 steakImg = loadImage('assets/Steak4.png')
+twigImg = loadImage('assets/twig.png')
+
 }
 
 
@@ -15,7 +18,7 @@ function setup() {
     createStickButton();
     createStoneButton();
     createMeatButton();
-    reset();
+    restartButton();
 
 }
 
