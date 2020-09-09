@@ -1,5 +1,6 @@
 // Website: https://alwin630.github.io/CivClicker_JS_Online/
 "use strict";
+let hunger;
 let steakImg;
 let twigImg;
 function preload() {
@@ -20,6 +21,7 @@ function setup() {
     createMeatButton();
     restartButton();
 
+    hunger = new Hunger();
 }
 
 
@@ -34,6 +36,9 @@ function draw() {
     drawSticks();
     drawStone();
     drawMeat();
+
+    hunger.show();
+    hunger.depletion(millis());
 }
 
 // Store number of sticks in browser
