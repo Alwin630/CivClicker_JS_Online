@@ -3,9 +3,12 @@
 let hunger;
 let steakImg;
 let twigImg;
+let campfireImg;
+
 function preload() {
 steakImg = loadImage('assets/Steak4.png')
 twigImg = loadImage('assets/twig.png')
+campfireImg = loadImage('assets/campfire.png');
 
 }
 
@@ -36,7 +39,7 @@ function draw() {
     drawSticks();
     drawStone();
     drawMeat();
-
+    image(campfireImg, 750,100, 173, 114);
     hunger.show();
     hunger.depletion(millis());
 }
