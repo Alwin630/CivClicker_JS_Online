@@ -31,7 +31,8 @@ function createStickButton() {
 
 // Increase the number of sticks
 function stickButtonLogic() {
-    stickAmount+=1;   
+    stickAmount+=1;
+    hunger.hungerAmount-=1;   
 }
 
 // Update the counter text
@@ -56,6 +57,8 @@ function createStoneButton() {
 
 function stoneButtonLogic() {
     stoneAmount+=1;
+    hunger.hungerAmount-=1;  
+    
 }
 
 function drawStone() {
@@ -80,6 +83,7 @@ function meatButtonLogic() {
     if(meatProb == 1) {
         meatAmount+= 1;
     }
+    hunger.hungerAmount-=1;  
 }
 
 function drawMeat() {
@@ -100,4 +104,6 @@ function resetLogic() {
     stoneAmount = 0;
     stickAmount = 0;
     meatAmount = 0;
+    hunger.hungerAmount=100;
+    
 }

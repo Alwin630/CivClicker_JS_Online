@@ -8,9 +8,11 @@ class Hunger {
     
     show() {
         //will replace "Hunger: " with food image
-        text("Hunger: "+this.hungerAmount+"/100",50, 920)
+        image(appleImg,100,882,44,50)
+        text(this.hungerAmount+"/100",150, 920)
         if(this.hungerAmount<=0) {
             text("You Died",450,860);
+            this.hungerAmount=0;
         }
     }
 
