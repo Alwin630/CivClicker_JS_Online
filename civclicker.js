@@ -26,6 +26,7 @@ function setup() {
     restartButton();
 
     hunger = new Hunger();
+    hunger.memory();
 }
 
 
@@ -61,6 +62,7 @@ let data = {
         window.localStorage.setItem('amountOfSticks', stickAmount);
         window.localStorage.setItem('amountOfStone', stoneAmount);
         window.localStorage.setItem('amountOfMeat', meatAmount);
+        window.localStorage.setItem('storedHunger', hunger.hungerAmount);
     }
 }
 

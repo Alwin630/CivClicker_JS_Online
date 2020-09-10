@@ -37,7 +37,8 @@ function stickButtonLogic() {
 
 // Update the counter text
 function drawSticks() {
-    
+    stroke(0);
+    strokeWeight(3);
     fill(77, 38, 0);
     textSize(32);
     text(stickAmount, xPosForNum, 50);
