@@ -1,6 +1,9 @@
 // Website: https://alwin630.github.io/CivClicker_JS_Online/
 "use strict";
+
 let hunger;
+let upgrade1;
+let upgrade2;
 let steakImg;
 let twigImg;
 let campfireImg;
@@ -27,6 +30,13 @@ function setup() {
 
     hunger = new Hunger();
     hunger.memory();
+    
+    upgrade1 = new upgradeButtons(1210,20);
+    upgrade1.show();
+
+    upgrade2 = new upgradeButtons(1210,120);
+    upgrade2.show();
+
 }
 
 
@@ -45,6 +55,9 @@ function draw() {
     image(campfireImg, 750,100, 173, 114);
     hunger.show();
     hunger.depletion(millis());
+
+    upgrade1.logic(5);
+    upgrade2.logic(-5);
 
 }
 

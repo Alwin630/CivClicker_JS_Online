@@ -105,6 +105,6 @@ function resetLogic() {
     stoneAmount = 0;
     stickAmount = 0;
     meatAmount = 0;
-    hunger.hungerAmount=100;
+    hunger.hungerAmount=300;
     
 }

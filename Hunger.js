@@ -11,10 +11,11 @@ class Hunger {
     if(isNaN( this.hungerAmount)) {
         this.hungerAmount = 0;
     }
+
     }
     show() {
         
-        image(appleImg,30,888,44,50);
+        image(appleImg,40,888,44,50);
         
         noStroke();
         rect(100,900,this.hungerAmount,30);
@@ -41,6 +42,9 @@ class Hunger {
 
         }
         
+        if(this.hungerAmount>300) {
+            this.hungerAmount = 300;
+        }
     }
 
 }
