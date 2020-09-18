@@ -43,7 +43,7 @@ class Hunger {
         }
         
         if(this.hungerAmount>300) {
-            this.hungerAmount = 300;
+            this.hungerAmount = 200;
         }
     }
 

@@ -32,10 +32,8 @@ function setup() {
     hunger.memory();
     
     upgrade1 = new upgradeButtons(1210,20);
-    upgrade1.show();
-
     upgrade2 = new upgradeButtons(1210,120);
-    upgrade2.show();
+    
 
 }
 
@@ -56,8 +54,10 @@ function draw() {
     hunger.show();
     hunger.depletion(millis());
 
-    upgrade1.logic(5);
-    upgrade2.logic(-5);
+    upgrade1.logic(5,mouseX,mouseY);
+    upgrade2.logic(1,mouseX,mouseY);
+    upgrade1.show();
+    upgrade2.show();
 
 }
 

@@ -2,23 +2,24 @@
 class upgradeButtons {
 
     constructor(x,y) {
-        this.upgradeButton;
-        this.x = x;
-        this.y = y;
+        this.pos = createVector(x,y);
     }
 
     show() {
-        this.upgradeButton = createButton('hui');
-        this.upgradeButton.position(this.x, this.y);
-        this.upgradeButton.size(70,70);
-        this.upgradeButton.mousePressed();
+        rect(this.pos.x,this.pos.y,50,50)
+        
         
     }
 
-    logic(f) {
-         hunger.hungerAmount+=f;
+    logic(f,mx,my) {
+        if(mouseIsPressed && mx>= this.pos.x && my >= this.pos.y && my <= this.pos.y+50) {
+            hunger.hungerAmount+=f;
+        }
+        
     }
 }
+
+
 
 
 
